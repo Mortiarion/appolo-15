@@ -1,0 +1,11 @@
+{
+	"welcome": "Добро пожаловать",
+	"description": "Это описание на русском языке",
+
+	"nav-menu-main": "Главная",
+	"nav-menu-about-us": "О нас",
+	"nav-menu-menu": "Меню",
+	"nav-menu-gallery": "Галерея",
+	"nav-menu-faq": "FAQ",
+	"nav-menu-contacts": "Контакты"
+}
