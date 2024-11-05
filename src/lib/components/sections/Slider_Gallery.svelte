@@ -182,7 +182,7 @@
 	}
 </script>
 
-<section>
+<section id="slider-gallery">
 	<div class="container mx-auto">
 		<div class="slider-container">
 			<button class="prev" type="button" on:click={movePrev}>&#10094</button>

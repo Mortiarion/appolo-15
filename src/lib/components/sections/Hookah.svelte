@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section>
+<section id="hookah">
 	<div class="container mx-auto px-10">
 		<div
 			class="bg-hookah_mobile mb-24 flex flex-col items-center bg-[length:172px_452px] bg-[top_100px_center] bg-no-repeat"

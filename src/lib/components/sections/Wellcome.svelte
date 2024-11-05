@@ -4,7 +4,7 @@
 	import Cocktails_Icon from '$lib/icons/Cocktails_Icon.svelte';
 </script>
 
-<section>
+<section id="wellcome">
 	<div class="container mx-auto mb-24 px-5">
 		<h1 class="mb-2 text-center text-2xl">Ласкаво просимо до "Apollo 15"</h1>
 

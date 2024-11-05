@@ -7,7 +7,7 @@
 </script>
 
 <!-- min-h-[760px] -->
-<section class="min-h-[400px]">
+<section id="apollo" class="min-h-[400px]">
 	<div class="relative">
 		<ul class="absolute right-[30px] top-[80px] flex flex-col gap-5">
 			<li>

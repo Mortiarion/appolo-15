@@ -263,7 +263,7 @@
 	];
 </script>
 
-<section>
+<section id="main-menu">
 	<div class="container mx-auto px-10 mb-24">
 		<div class="font-audiowide">
 			<h2 class="mb-10 text-center text-2xl">МЕНЮ</h2>

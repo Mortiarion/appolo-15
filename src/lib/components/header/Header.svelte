@@ -64,11 +64,12 @@
 
 			<ul class:open={isOpenMainDropdown}>
 				<li><a href="/">{$t('nav-menu-main')}</a></li>
-				<li><a href="/">{$t('nav-menu-about-us')}</a></li>
-				<li><a href="/">{$t('nav-menu-menu')}</a></li>
-				<li><a href="/">{$t('nav-menu-gallery')}</a></li>
-				<li><a href="/">{$t('nav-menu-faq')}</a></li>
-				<li><a href="/">{$t('nav-menu-contacts')}</a></li>
+				<li><a href="#wellcome">{$t('nav-menu-about-us')}</a></li>
+				<li><a href="#hookah">Кальяни</a></li>
+				<li><a href="#main-menu">{$t('nav-menu-menu')}</a></li>
+				<li><a href="#slider-gallery">{$t('nav-menu-gallery')}</a></li>
+				<li><a href="#faq">{$t('nav-menu-faq')}</a></li>
+				<li><a href="#contacts">{$t('nav-menu-contacts')}</a></li>
 			</ul>
 		</div>
 

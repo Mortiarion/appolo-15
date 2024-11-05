@@ -36,7 +36,7 @@
 	}
 </script>
 
-<section>
+<section id="faq">
 	<div class="container mx-auto mb-24 px-5">
 		<div class="faq-container">
 			<h2 class=" text-center font-audiowide text-2xl font-bold">ЧАСТІ ПИТАННЯ</h2>

@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<section>
+<section id="contacts">
 	<div class="container mx-auto px-5 mb-24">
 		<div class="flex flex-col items-center gap-5">
 			<div class="flex flex-col items-center gap-2.5">
