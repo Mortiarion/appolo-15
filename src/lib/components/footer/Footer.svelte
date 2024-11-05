@@ -40,7 +40,7 @@
 				</li>
 			</ul>
 
-			<a class="truncate text-pol_conf" href="/page/privacy_policy">Політика конфіденційності</a>
+			<a class="truncate text-pol_conf" href="/privacy_policy">Політика конфіденційності</a>
 		</div>
 	</div>
 </footer>

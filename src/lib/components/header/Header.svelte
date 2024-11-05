@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Logo_Icon from '$lib/icons/Logo_Icon.svelte';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { locale, t } from 'svelte-i18n';
 
 	let isOpenMainDropdown = $state(false);
@@ -33,12 +33,39 @@
 		isDesctop = window.innerWidth > 767;
 	}
 
-	onMount(() => {
-		window.addEventListener('resize', handleResize);
-	});
+	function handleClickOutside(event: MouseEvent) {
+		const nav = document.getElementById('nav');
+		const mainDropdownButton = document.querySelector('.main-dropdown-button');
+		const langSw = document.getElementById('language-switcher');
+		const langButton = document.getElementById('lang-button');
 
-	onDestroy(() => {
-		window.removeEventListener('resize', handleResize);
+		if (
+			nav &&
+			mainDropdownButton &&
+			!nav.contains(event.target as Node) &&
+			!mainDropdownButton.contains(event.target as Node)
+		) {
+			isOpenMainDropdown = false;
+		}
+
+		if (
+			langSw &&
+			langButton &&
+			!langSw.contains(event.target as Node) &&
+			!langButton.contains(event.target as Node)
+		) {
+			isOpenLanguageSwitcher = false;
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+			window.removeEventListener('resize', handleResize);
+		};
 	});
 </script>
 
@@ -62,14 +89,29 @@
 				<span class:open={isOpenMainDropdown}></span>
 			</button>
 
-			<ul class:open={isOpenMainDropdown}>
-				<li><a href="/">{$t('nav-menu-main')}</a></li>
-				<li><a href="#wellcome">{$t('nav-menu-about-us')}</a></li>
-				<li><a href="#hookah">Кальяни</a></li>
-				<li><a href="#main-menu">{$t('nav-menu-menu')}</a></li>
-				<li><a href="#slider-gallery">{$t('nav-menu-gallery')}</a></li>
-				<li><a href="#faq">{$t('nav-menu-faq')}</a></li>
-				<li><a href="#contacts">{$t('nav-menu-contacts')}</a></li>
+			<ul id="nav" class:open={isOpenMainDropdown}>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="/">{$t('nav-menu-main')}</a>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#wellcome">{$t('nav-menu-about-us')}</a>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#hookah">{$t('nav-menu-hookah')}</a>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#main-menu">{$t('nav-menu-menu')}</a>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#slider-gallery">{$t('nav-menu-gallery')}</a
+					>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#faq">{$t('nav-menu-faq')}</a>
+				</li>
+				<li>
+					<a onclick={() => toggleMainDropdown()} href="#contacts">{$t('nav-menu-contacts')}</a>
+				</li>
 			</ul>
 		</div>
 
@@ -81,6 +123,7 @@
 
 		<div class="language-swicther">
 			<button
+				id="lang-button"
 				type="button"
 				aria-label={$locale}
 				onclick={toggleOpetLanguageSwitcher}
@@ -94,7 +137,7 @@
 			</button>
 
 			{#if isOpenLanguageSwitcher}
-				<ul>
+				<ul id="language-switcher">
 					{#each languages as { code, label }}
 						<li>
 							<button
@@ -158,9 +201,9 @@
 						position: absolute;
 						display: flex;
 						flex-direction: column;
-						background-color: gold;
+						/* background-color: gold; */
 						white-space: nowrap;
-						top: 40px;
+						top: 80px;
 					}
 				}
 			}
