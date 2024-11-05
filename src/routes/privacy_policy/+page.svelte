@@ -39,17 +39,17 @@
 </script>
 
 <section>
-	<div class="container mx-auto px-10">
+	<div class="container mx-auto px-5">
 		<div class="font-lato">
-			<h1 class="mb-5 text-center text-xl">Політика конфіденційності</h1>
-			<p class="mb-10 text-sm">
+			<h1 class="mb-5 text-center text-xl lg:text-4xl lg:mb-10">Політика конфіденційності</h1>
+			<p class="mb-10 text-sm lg:text-xl lg:mb-14">
 				Ця політика конфіденційності визначає, як наш сайт – «Apollo 15» обробляє особисту
 				інформацію відвідувачів. Ми поважаємо вашу приватність та зобов'язуємося забезпечувати
 				захист вашої інформації.
 			</p>
-			<div class="flex flex-col gap-5">
+			<div class="flex flex-col gap-5 lg:gap-14">
 				{#each list as l}
-					<div class="flex flex-col gap-2.5 text-sm">
+					<div class="flex flex-col gap-2.5 text-sm lg:text-xl">
 						<p class="font-bold">{l.text_one}</p>
 						<span>{l.text_two}</span>
 					</div>
