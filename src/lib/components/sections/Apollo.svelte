@@ -7,9 +7,9 @@
 </script>
 
 <!-- min-h-[760px] -->
-<section class=" min-h-[460px]">
+<section class="min-h-[400px]">
 	<div class="relative">
-		<ul class="absolute right-[60px] top-[100px] flex flex-col gap-5">
+		<ul class="absolute right-[30px] top-[80px] flex flex-col gap-5">
 			<li>
 				<a href="/">
 					<Tell_Icon />

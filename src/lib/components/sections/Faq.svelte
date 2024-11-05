@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	const questions = [
 		{ question: 'Чи можна у Вас замовити кальян та яка вартість?' },
 		{ question: 'Чи можливо у Вас замовити їжу?' },
@@ -38,23 +37,23 @@
 </script>
 
 <section>
-	<div class="container px-5 mx-auto">
+	<div class="container mx-auto mb-24 px-5">
 		<div class="faq-container">
-			<h2 class=" text-center font-audiowide text-2xl font-bold">Часті питання:</h2>
+			<h2 class=" text-center font-audiowide text-2xl font-bold">ЧАСТІ ПИТАННЯ</h2>
+
 			<ul class="question-list">
 				{#each questions as { question }, index}
 					<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 					<li class="question-item" on:click={() => toggle(index)}>
-						<div class="question-text text-lg">
-							<div class="flex justify-between">
+						<div class="question-text text-xl">
+							<button type="button" class="flex justify-between text-left">
 								{question}
-								<span class="icon">&#8250;</span>
+								<span class="icon {openIndex === index ? 'rotate' : ''}">&#8250;</span>
+							</button>
+
+							<div class="answer text-base text-faq-unswer {openIndex === index ? 'open' : ''}">
+								<p>{respond[index].text}</p>
 							</div>
-							{#if openIndex === index}
-								<div class="answer text-base text-faq-unswer">
-									<p>{respond[index].text}</p>
-								</div>
-							{/if}
 						</div>
 					</li>
 				{/each}
@@ -63,25 +62,31 @@
 	</div>
 </section>
 
-<style>
+<style lang="postcss">
 	.faq-container {
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
 	}
 
+	.question-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
 	.question-item {
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
+		border-bottom: 1px solid #2e2e2e;
+		padding-bottom: 20px;
 	}
 
 	.question-text {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		padding: 15px 10px 30px;
-		border-bottom: 1px solid #2e2e2e;
 	}
 
 	.icon {
@@ -89,11 +94,29 @@
 		transition: transform 0.3s;
 	}
 
-	.question-item:hover .icon {
+	.rotate {
 		transform: rotate(90deg);
 	}
 
 	.answer {
-		padding: 15px 10px;
+		padding: 15px 10px 0;
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.5s ease;
+
+		&.open {
+			max-height: 200px;
+		}
+	}
+
+	@media (hover: hover) {
+		.question-item:hover .icon {
+			transform: rotate(90deg);
+		}
+	}
+	@media (hover: none) {
+		.question-item:active .icon {
+			transform: rotate(90deg);
+		}
 	}
 </style>

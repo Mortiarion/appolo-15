@@ -1,119 +1,281 @@
 <script lang="ts">
 	let list_one = [
-		{ text_one: 'Heineken', text_two: '80₴' },
+		{ text_one: 'Krusovice Svetle', text_two: '80₴' },
+		{ text_one: 'Krusovice Cerne', text_two: '80₴' },
+		{ text_one: 'Hoegaarden', text_two: '90₴' },
 		{ text_one: 'Stella Artois', text_two: '90₴' },
 		{ text_one: 'Budweiser', text_two: '90₴' },
-		{ text_one: 'Krusovice Svetle', text_two: '100₴' },
-		{ text_one: 'Guinness', text_two: '100₴' },
-		{ text_one: 'Krusovice Cerne', text_two: '90₴' },
-		{ text_one: 'Corona', text_two: '90₴' },
-		{ text_one: '', text_two: '' }
+		{ text_one: 'Corona', text_two: '110₴' },
+		{ text_one: 'Guinness', text_two: '130₴' }
 	];
 
 	let list_two = [
-		{ text_one: 'Морозиво NASA', text_two: '140₴' },
 		{ text_one: 'В’ялене м’ясо', text_two: '80₴' },
 		{ text_one: 'Горішки', text_two: '80₴' },
-		{ text_one: 'Сухарики з часником', text_two: '80₴' }
+		{ text_one: 'Сухарики з часником', text_two: '80₴' },
+		{ text_one: 'Морозиво “Астронавт”', text_two: '140₴' }
 	];
 
 	let list_three = [
-		{ text_one: 'Мертвий рашист', text_two: '0₴' },
-		{ text_one: 'Космополитан', text_two: '0₴' },
-		{ text_one: 'Відвертка', text_two: '0₴' },
-		{ text_one: 'Голуба лагуна', text_two: '0₴' }
+		{ text_one: 'Закрутка (90мл)', text_two: '100₴', text_three: 'Водка, апельсиновий сік' },
+		{ text_one: 'Мертвий рашист (90мл)', text_two: '120₴', text_three: 'Водка, кофейний лікер' },
+		{
+			text_one: 'Космополітан (150мл)',
+			text_two: '180₴',
+			text_three: 'Водка, тріпл сек, журавлинний сік, лаймовий сік'
+		},
+		{
+			text_one: 'Голуба лагуна (210мл)',
+			text_two: '190₴',
+			text_three: 'Водка, голубий кюросау, содова'
+		}
 	];
 
 	let list_four = [
-		{ text_one: 'Мохито', text_two: '0₴' },
-		{ text_one: 'Дайкірі', text_two: '0₴' },
-		{ text_one: 'Куба лібре', text_two: '0₴' },
-		{ text_one: 'Піна коллада', text_two: '0₴' }
+		{
+			text_one: 'Мохито (160мл)',
+			text_two: '160₴',
+			text_three: 'Білий ром, сироп, содова, лайм, м’ята'
+		},
+		{
+			text_one: 'Куба лібре (140мл)',
+			text_two: '180₴',
+			text_three: 'Золотий ром, лаймовий сік, кока-кола, лайм'
+		},
+		{
+			text_one: 'Піна коллада (150мл)',
+			text_two: '180₴',
+			text_three: 'Білий ром, темний ром, кокосовий сироп, лаймовий сік, ананасовий сік'
+		},
+		{ text_one: 'Дайкірі (120мл)', text_two: '195₴', text_three: 'Білий ром, сироп, лаймовий сік' }
 	];
 
 	let list_five = [
-		{ text_one: 'Олд фешен', text_two: '0₴' },
-		{ text_one: 'Пеніциллін', text_two: '0₴' },
-		{ text_one: 'Хрещенний батько', text_two: '0₴' },
-		{ text_one: 'Іржавий цвях', text_two: '0₴' }
+		{ text_one: 'Іржавий цвях (75мл)', text_two: '170₴', text_three: 'Віскі, драмбуи ликер' },
+		{ text_one: 'Хрещенний батько (90мл)', text_two: '180₴', text_three: 'Віскі, лікер амаретто' },
+		{
+			text_one: 'Олд фешен (90мл)',
+			text_two: '190₴',
+			text_three: 'Бурбон, биттер, тростніковий цукор'
+		},
+		{
+			text_one: 'Пеніциллін (140мл)',
+			text_two: '190₴',
+			text_three: 'Віскі, медовий сироп, лимонний сік'
+		}
 	];
 
 	let list_six = [
-		{ text_one: 'Біла леді', text_two: '0₴' },
-		{ text_one: 'Френч 75', text_two: '0₴' },
-		{ text_one: 'Том коллінз', text_two: '0₴' },
-		{ text_one: 'Негроні', text_two: '0₴' }
+		{
+			text_one: 'Негроні (120мл)',
+			text_two: '180₴',
+			text_three: 'Джин, червоний вермут, червоний біттер'
+		},
+		{
+			text_one: 'Біла леді (120мл)',
+			text_two: '180₴',
+			text_three: 'Джин, тріпл сек, лимонний сік'
+		},
+		{ text_one: 'Том коллінз', text_two: '190₴', text_three: 'Джин, сироп, лимонний сік, содова' },
+		{
+			text_one: 'Френч 75 (160мл)',
+			text_two: '200₴',
+			text_three: 'Джин, просекко, сироп, лимонний сік'
+		}
 	];
 
 	let list_seven = [
-		{ text_one: 'Маргарита', text_two: '0₴' },
-		{ text_one: 'Текила санрайз', text_two: '0₴' },
-		{ text_one: 'Заздрість', text_two: '0₴' },
-		{ text_one: 'Сміливий казак', text_two: '0₴' }
+		{
+			text_one: 'Сміливий казак (120мл)',
+			text_two: '140₴',
+			text_three: 'Текіла срібна, кофейний лікер'
+		},
+		{
+			text_one: 'Заздрість (140мл)',
+			text_two: '150₴',
+			text_three: 'Текіла срібна, голубий куросао, ананасовий сік'
+		},
+		{
+			text_one: 'Текила санрайз (200мл)',
+			text_two: '180₴',
+			text_three: 'Текіла срібна, гренадін, апельсиновий сік'
+		},
+		{
+			text_one: 'Маргарита (120мл)',
+			text_two: '190₴',
+			text_three: 'Текіла срібна, тріпл сік, сироп, лаймовий сік'
+		}
 	];
 
 	let list_eight = [
-		{ text_one: 'Белліні', text_two: '0₴' },
-		{ text_one: 'Мімоза', text_two: '0₴' },
-		{ text_one: 'Апероль шпріц', text_two: '0₴' },
-		{ text_one: 'Небесне сяйво', text_two: '0₴' }
+		{ text_one: 'Мімоза (140мл)', text_two: '170₴', text_three: 'Просекко, апельсиновий сік' },
+		{
+			text_one: 'Белліні (200мл)',
+			text_two: '190₴',
+			text_three: 'Просекко, сироп, лимонний сік, персикове пюре'
+		},
+		{
+			text_one: 'Апероль шпріц (290мл)',
+			text_two: '200₴',
+			text_three: 'Просекко, апероль, содова'
+		},
+		{
+			text_one: 'Небесне сяйво (200мл)',
+			text_two: '220₴',
+			text_three: 'Текіла, джин, водка, белій ром, тріпл сік, просекко'
+		}
 	];
 
 	let list_nine = [
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' }
+		{
+			text_one: 'Космічний Еліксир',
+			text_two: '160₴',
+			text_three: 'Базилік, Джин, Сік лимона, цукровий сироп '
+		},
+		{
+			text_one: 'Супернова',
+			text_two: '160₴',
+			text_three: 'Водка, Гренадин, Спрайт'
+		},
+		{
+			text_one: 'Марсіанський Захід',
+			text_two: '160₴',
+			text_three: 'Сік лайма, Сік граната, Джин, цукровий сироп, золотой глітер'
+		},
+		{
+			text_one: 'Кровавий місяць',
+			text_two: '180₴',
+			text_three: 'Віскі Jameson, Гранатовий сік '
+		},
+		{
+			text_one: 'Рожева планета',
+			text_two: '200₴',
+			text_three: 'Текіла, Сік грейпфрута, Грейпфрутовий сироп Сік лайма,Содова, Кампарі '
+		},
+		{
+			text_one: 'Темна матерія',
+			text_two: '200₴',
+			text_three: 'Єгермейстер, Текіла, Вишневий сік, Сік лимона'
+		},
+		{
+			text_one: 'Сонце',
+			text_two: '200₴',
+			text_three: 'Ананасовий сік, Лимонний сік, Бурбон'
+		},
+		{
+			text_one: 'Зоряний Жаб’як',
+			text_two: '220₴',
+			text_three: 'Абсент, Шампанське'
+		},
+		{
+			text_one: 'Зелена комета',
+			text_two: '240₴',
+			text_three: 'Джин, Текіла, Ром, Абсент '
+		},
+		{
+			text_one: 'Астероїдний поцілунок',
+			text_two: '240₴',
+			text_three: 'Бурбон, Апероль, цукровий сироп, Просекко '
+		}
 	];
 
 	let list_ten = [
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' },
-		{ text_one: 'C', text_two: '0₴' }
+		{
+			text_one: 'Б-52',
+			text_two: '120₴',
+			text_three: 'Кавовий лікер, айріш крім, тріпл сек'
+		},
+		{
+			text_one: 'Хіросіма',
+			text_two: '120₴',
+			text_three: 'Самбука, абсент, айриш крім, гренадін'
+		},
+		{
+			text_one: 'Зелений мексиканець',
+			text_two: '120₴',
+			text_three: 'Текіла, лікер, лимонний сік'
+		}
 	];
 
 	let list_eleven = [
-		{ text_one: 'С', text_two: '0₴' },
-		{ text_one: 'С', text_two: '0₴' },
-		{ text_one: 'С', text_two: '0₴' },
-		{ text_one: 'С', text_two: '0₴' }
+		{
+			text_one: 'Мінеральна вода газована/негазована (500мл)',
+			text_two: '40₴'
+		},
+		{
+			text_one: 'Сік в асортименті (200мл)',
+			text_two: '45₴'
+		},
+		{
+			text_one: 'Кола/Фанта/Спрайт (330мл)',
+			text_two: '50₴'
+		},
+		{
+			text_one: 'Швепс мандарин/гранат (330мл)',
+			text_two: '55₴'
+		},
+		{
+			text_one: 'Мохіто',
+			text_two: '130₴'
+		},
+		{
+			text_one: 'Лимонад (500мл/1000мл)',
+			text_two: '90₴/140₴'
+		}
 	];
 
 	let list_twelve = [
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' }
+		{ text_one: 'Зелений', text_two: '80₴' },
+		{ text_one: 'Чорний', text_two: '80₴' },
+		{ text_one: 'Трав’яний', text_two: '80₴' }
 	];
 
 	let list_thersteen = [
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' }
+		{ text_one: 'Улун', text_two: '140₴' },
+		{ text_one: 'Шу Пуер', text_two: '140₴' },
+		{ text_one: 'Шен Пуер ', text_two: '140₴' },
+		{ text_one: 'Ті Гуань Інь', text_two: '140₴' },
+		{ text_one: 'Да Хун Пао', text_two: '140₴' },
+		{ text_one: 'Бай Му Дань', text_two: '140₴' }
 	];
 
 	let list_fourteen = [
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' },
-		{ text_one: '', text_two: '0₴' }
+		{ text_one: 'Малина-Апельсин', text_two: '120₴' },
+		{ text_one: 'Вишня-Смородина', text_two: '120₴' },
+		{ text_one: 'Імбир-Журавлина', text_two: '120₴' },
+		{ text_one: 'Обліпиха-Мед-Імбир', text_two: '120₴' },
+		{ text_one: 'Апельсин-М’ята', text_two: '120₴' },
+		{ text_one: 'Липа-М’ята', text_two: '120₴' },
+		{ text_one: 'Мараканський', text_two: '120₴' },
+		{ text_one: 'Саусеп', text_two: '120₴' },
+		{ text_one: 'Каркаде', text_two: '120₴' },
+		{ text_one: 'Лісові ягоди', text_two: '120₴' }
+	];
+	
+	let list_fiveteen = [
+		{ text_one: 'Сироп', text_two: '15₴' },
+		{ text_one: 'Еспрессо', text_two: '50₴' },
+		{ text_one: 'Американо', text_two: '50₴' },
+		{ text_one: 'Американо з молоком', text_two: '60₴' },
+		{ text_one: 'Латте', text_two: '60₴' },
+		{ text_one: 'Капучино', text_two: '60₴' },
+		{ text_one: 'Флет Уайт', text_two: '60₴' }
 	];
 </script>
 
 <section>
-	<div class="container mx-auto px-10">
-		<div class=" font-audiowide px-2">
-			<h2 class="mb-16 text-center text-5xl">Меню</h2>
-			<div class="">
+	<div class="container mx-auto px-10 mb-24">
+		<div class="font-audiowide">
+			<h2 class="mb-10 text-center text-2xl">МЕНЮ</h2>
+
+			<div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Пиво</p>
 						<div class="separator"></div>
-						<span class="">330мл/500мл</span>
+						<span>330мл/500мл</span>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_one as list}
 							<li class="flex justify-between">
 								{list.text_one} <span>{list.text_two}</span>
@@ -122,141 +284,206 @@
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Закуски</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_two as list}
-							<li class="flex justify-between ">
+							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з водкою</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_three as list}
-							<li class="flex justify-between">
-								<span>{list.text_one}</span>{list.text_two}
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з ромом</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_four as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з віскі</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_five as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з джином</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_six as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з текілою</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_seven as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Коктейлі з просекко</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_eight as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
-						<p class="whitespace-nowrap text-xl">Чай/кава</p>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Зіркові коктейлі</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_nine as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
-						<p class="whitespace-nowrap text-xl">Крафтові</p>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Шоти</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_ten as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
+							<li>
+								<div class="flex justify-between">
+									<p>
+										{list.text_one}
+									</p>
+									<span>
+										{list.text_two}
+									</span>
+								</div>
+								<span class="text-sm text-coctail_subtitle">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
+					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl">Безалкогольні</p>
 						<div class="separator"></div>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_eleven as list}
-							<li class="flex justify-between ">
+							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
 							</li>
 						{/each}
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
-						<p class="whitespace-nowrap text-xl">Саури</p>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Класичні чаї</p>
 						<div class="separator"></div>
+						<span>600мл</span>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_twelve as list}
 							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
@@ -265,11 +492,12 @@
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
-						<p class="whitespace-nowrap text-xl">Наливки</p>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Китайські чаї</p>
 						<div class="separator"></div>
+						<span>800мл</span>
 					</div>
-					<ul>
+					<ul class="mb-10">
 						{#each list_thersteen as list}
 							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
@@ -278,12 +506,26 @@
 					</ul>
 				</div>
 				<div>
-					<div class="mb-10 flex items-center">
-						<p class="whitespace-nowrap text-xl">C</p>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Органічні чаї</p>
+						<div class="separator"></div>
+						<span>800мл</span>
+					</div>
+					<ul class="mb-10">
+						{#each list_fourteen as list}
+							<li class="flex justify-between">
+								{list.text_one}<span>{list.text_two}</span>
+							</li>
+						{/each}
+					</ul>
+				</div>
+				<div>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl">Кава</p>
 						<div class="separator"></div>
 					</div>
 					<ul>
-						{#each list_fourteen as list}
+						{#each list_fiveteen as list}
 							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
 							</li>

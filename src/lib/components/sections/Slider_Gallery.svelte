@@ -235,6 +235,7 @@
 	.slider-container {
 		position: relative;
 		overflow: hidden;
+		margin-bottom: 96px;
 
 		& .prev,
 		.next {
@@ -243,7 +244,7 @@
 			z-index: 2;
 			top: 0;
 			bottom: 0;
-			padding: 0 15px;
+			padding: 0 10px;
 			font-size: 40px;
 			transition: transform 0.3s ease;
 
@@ -265,6 +266,7 @@
 			justify-content: center;
 			align-items: center;
 			height: 166px;
+
 			& .slide {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);

@@ -28,13 +28,13 @@
 	<div class=" flex min-h-screen flex-col bg-app font-lato text-white">
 		<img
 			class=" fixed z-[-1] min-h-screen w-full lg:hidden"
-			src="/paralax_two-mobile-800-450.webp"
+			src="/paralax_two-mobile-320-767.webp"
 			alt="paralax"
 		/>
 
 		<img
 			class=" fixed z-[-1] min-h-screen w-full bs:hidden lg:block"
-			src="/paralax_two-800-450.webp"
+			src="/paralax_two-desctop-768-1440.webp"
 			alt="paralax"
 		/>
 

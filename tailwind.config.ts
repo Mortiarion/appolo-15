@@ -14,9 +14,9 @@ export default {
 		},
 		backgroundImage: {
 			header: "url('/header.png')",
-			// parallax: "url('/paralax.jpg')",
 			apollo: "url('/apollo.jpg')",
-			union: "url('/union.svg')",
+			hookah_mobile: "url('/hookah_mobile_icon.svg')",
+			hookah_desctop: "url('/hookah_desctop_icon.svg')",
 			section: "url('/bg_two_section.gif')",
 			'parallax-1920-1080': "url('/paralax_two-1920-1080.webp')",
 			'parallax-800-450': "url('/paralax_two-800-450.webp')"
@@ -24,7 +24,10 @@ export default {
 		colors: {
 			app: '#06014066',
 			white: '#FFFFFF',
-			'faq-unswer': ' #9F9F9F'
+			'faq-unswer': ' #9F9F9F',
+			pol_conf: '#747474',
+			hookah_subtitle: '#9E9E9E',
+			coctail_subtitle: '#6D6D6D'
 		},
 		screens: {
 			bs: '320px',
