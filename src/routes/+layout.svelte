@@ -25,7 +25,7 @@
 </script>
 
 {#if isInitialized}
-	<div class=" flex min-h-screen flex-col font-lato text-white scroll-smooth">
+	<div class=" flex min-h-screen flex-col scroll-smooth font-lato text-white">
 		<div>
 			<img
 				class=" fixed z-[-1] min-h-screen w-full lg:hidden"

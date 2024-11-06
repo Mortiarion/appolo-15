@@ -24,6 +24,7 @@ export default {
 		colors: {
 			app: '#06014066',
 			white: '#FFFFFF',
+			black: '#000000',
 			'faq-unswer': ' #9F9F9F',
 			pol_conf: '#747474',
 			hookah_subtitle: '#9E9E9E',
