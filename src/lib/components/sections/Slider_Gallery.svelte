@@ -326,6 +326,7 @@
 
 		& img {
 			border-radius: 18px;
+			padding: 0 50px;
 		}
 
 		& .modal-prev,
