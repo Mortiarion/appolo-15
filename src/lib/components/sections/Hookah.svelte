@@ -25,7 +25,7 @@
 
 <section id="hookah">
 	<div
-		class="container mx-auto bg-hookah_mobile bg-[length:270px_750px] bg-[top_100px_center] bg-no-repeat px-10"
+		class="container mx-auto bg-hookah_mobile bg-[length:290px_810px] bg-[top_100px_center] bg-no-repeat px-10"
 	>
 		<div class="mb-24 flex flex-col items-center">
 			<h2 class="mb-10 font-audiowide text-2xl">КАЛЬЯН</h2>
