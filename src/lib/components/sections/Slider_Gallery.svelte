@@ -265,6 +265,7 @@
 			justify-content: center;
 			align-items: center;
 			height: 166px;
+			margin: 40px 0;
 
 			& .slide {
 				display: grid;
@@ -276,6 +277,7 @@
 					transform 1s ease,
 					visibility 1s ease;
 				visibility: hidden;
+
 
 				&.active {
 					visibility: visible;
