@@ -183,7 +183,7 @@
 </script>
 
 <section id="slider-gallery">
-	<div class="container mx-auto">
+	<div class="container mx-auto mb-24">
 		<div class="slider-container">
 			<button class="prev" type="button" on:click={movePrev}>&#10094</button>
 			<div
@@ -235,7 +235,6 @@
 	.slider-container {
 		position: relative;
 		overflow: hidden;
-		margin-bottom: 96px;
 
 		& .prev,
 		.next {
