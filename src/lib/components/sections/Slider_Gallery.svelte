@@ -248,9 +248,9 @@
 			font-size: 40px;
 			transition: transform 0.3s ease;
 
-			&:hover {
+			/* &:hover {
 				transform: scale(1.55);
-			}
+			} */
 		}
 
 		& .prev {
@@ -325,7 +325,6 @@
 		align-items: center;
 
 		& img {
-			width: 40%;
 			border-radius: 18px;
 		}
 
@@ -333,7 +332,6 @@
 		.modal-next {
 			font-size: 45px;
 			position: absolute;
-			top: 50%;
 			padding: 20px;
 			transition:
 				background-color 0.3s ease,
@@ -341,18 +339,12 @@
 				transform 0.3s ease;
 			border-radius: 8px;
 
-			&:hover {
-				background-color: grey;
-				color: black;
-				transform: scale(1.55);
-			}
-
 			&.modal-prev {
-				left: 40px;
+				left: 0;
 			}
 
 			&.modal-next {
-				right: 40px;
+				right: 0;
 			}
 		}
 
@@ -367,12 +359,6 @@
 				transform 0.3s ease,
 				color 0.3s ease;
 			border-radius: 8px;
-
-			&:hover {
-				background-color: grey;
-				color: black;
-				transform: scale(1.55);
-			}
 		}
 	}
 </style>

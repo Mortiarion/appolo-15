@@ -24,13 +24,13 @@
 </script>
 
 <section id="hookah">
-	<div class="container mx-auto px-10">
-		<div
-			class="bg-hookah_mobile mb-24 flex flex-col items-center bg-[length:172px_452px] bg-[top_100px_center] bg-no-repeat"
-		>
+	<div
+		class="container mx-auto bg-hookah_mobile bg-[length:270px_750px] bg-[top_100px_center] bg-no-repeat px-10"
+	>
+		<div class="mb-24 flex flex-col items-center">
 			<h2 class="mb-10 font-audiowide text-2xl">КАЛЬЯН</h2>
 
-			<div class="mb-10">
+			<div class="mb-10 flex flex-col gap-14">
 				{#each block_one as block}
 					<div class="flex flex-col items-center gap-2.5 font-audiowide">
 						<h4 class="text-center text-xl">{block.heading}</h4>
