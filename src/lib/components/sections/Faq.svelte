@@ -46,7 +46,7 @@
 					<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 					<li class="question-item" on:click={() => toggle(index)}>
 						<div class="question-text text-xl">
-							<button type="button" class="flex justify-between lg:text-2xl">
+							<button type="button" class="flex justify-between text-left lg:text-2xl">
 								{question}
 								<span class="icon {openIndex === index ? 'rotate' : ''}">&#8250;</span>
 							</button>
