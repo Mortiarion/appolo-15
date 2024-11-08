@@ -264,11 +264,11 @@
 </script>
 
 <section id="main-menu">
-	<div class="container mx-auto mb-14 px-10">
+	<div class="container mx-auto mb-14 px-10 2xl:px-14">
 		<div class="font-audiowide">
 			<h2 class="mb-10 text-center text-2xl lg:mb-14 lg:text-5xl">МЕНЮ</h2>
 
-			<div>
+			<div class="xl:grid xl:grid-cols-2 xl:gap-x-5 2xl:gap-x-20">
 				<div>
 					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Пиво</p>

@@ -22,7 +22,7 @@
 </script>
 
 <header>
-	<div class="container mx-auto flex items-center justify-around p-10 lg:justify-between">
+	<div class="container mx-auto flex items-center justify-around p-10 lg:justify-between xl:px-14">
 		{#if isDesctop}
 			<a href="/">
 				<Logo_Icon />

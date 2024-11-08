@@ -25,12 +25,12 @@
 
 <section id="hookah">
 	<div
-		class="container mx-auto bg-hookah_mobile bg-[length:290px_810px] bg-[top_100px_center] bg-no-repeat px-10"
+		class="container mx-auto bg-hookah_mobile bg-[length:290px_810px] bg-[top_100px_center] bg-no-repeat px-10 xl:bg-hookah_desctop xl:bg-[length:162px_422px]"
 	>
 		<div class="mb-24 flex flex-col items-center">
 			<h2 class="mb-10 font-audiowide text-2xl lg:mb-14 lg:text-5xl">КАЛЬЯН</h2>
 
-			<div class="mb-10 flex flex-col gap-14">
+			<div class="mb-10 flex flex-col gap-14 xl:grid xl:grid-cols-2 xl:gap-x-60 xl:gap-y-20">
 				{#each block_one as block}
 					<div class="flex flex-col items-center gap-2.5 font-audiowide">
 						<h4 class="text-center text-xl lg:text-4xl">{block.heading}</h4>

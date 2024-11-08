@@ -8,7 +8,7 @@
 	<div class="container mx-auto mb-24 px-5 lg:px-14">
 		<h1 class="mb-2 text-center text-2xl lg:text-5xl lg:px-10 lg:mb-10">Ласкаво просимо до "Apollo 15"</h1>
 
-		<p class="text-center text-sm lg:text-xl">
+		<p class="text-center text-sm lg:text-xl xl:w-[890px] xl:mx-auto">
 			Наш Lounge Bar це затишний куточок, де час сповільнюється, а фантазія розлітається у світ
 			загадкового космосу. Стильний інтер'єр, м'яке світло та димні кальяни створюють неймовірну та
 			неповторну атмосферу, даруючи незабутні враження та приємні емоції. Барна карта приємно вас
@@ -18,8 +18,8 @@
 
 		<p class="text-center text-sm lg:text-xl">Також до вашої уваги настільні ігри та ігри на PlayStation.</p>
 
-		<div class="mt-10 flex flex-col gap-14 px-5 lg:w-[335px] lg:mx-auto lg:mt-14">
-			<div class="flex flex-col items-center gap-6">
+		<div class="mt-10 flex flex-col gap-14 px-5 lg:w-[335px] lg:mx-auto lg:mt-14 xl:flex-row xl:w-full xl:text-xl">
+			<div class="flex flex-col items-center gap-6 xl:justify-between">
 				<Hookah_Icon />
 				<p class="text-center lg:px-5">
 					Димні та неймовірні кальяни поринуть вас в атмосферу невагомості, та перенесуть у
@@ -27,7 +27,7 @@
 				</p>
 			</div>
 
-			<div class="flex flex-col items-center gap-6">
+			<div class="flex flex-col items-center gap-6 xl:justify-between">
 				<Playstation_Icon />
 				<p class="text-center lg:px-5">
 					Перенесе вас у загадковий світ віртуальної реальності, з самими свіжими іграми для вас та
@@ -35,7 +35,7 @@
 				</p>
 			</div>
 
-			<div class="flex flex-col items-center gap-6">
+			<div class="flex flex-col items-center gap-6 xl:justify-between">
 				<Cocktails_Icon />
 				<p class="text-center lg:px-4">
 					Коктейльна карта відірве вас від реальності та подарує вишуканний світ незабутніх емоцій!
