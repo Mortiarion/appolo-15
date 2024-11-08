@@ -260,6 +260,7 @@
 
 		& .slider-track {
 			height: 370px;
+			padding: 20px 0;
 
 			& .slide {
 				display: grid;
@@ -271,8 +272,10 @@
 					transform 1s ease,
 					visibility 1s ease;
 				visibility: hidden;
-				height: 100%;
+				/* aspect-ratio: 2/1; */
+					/* height: 100%; */
 
+				
 				&.active {
 					visibility: visible;
 				}
@@ -286,7 +289,6 @@
 					border-radius: 12px;
 					cursor: pointer;
 					height: 100%;
-					aspect-ratio: 1;
 
 					&:hover {
 						transform: scale(1.05);
