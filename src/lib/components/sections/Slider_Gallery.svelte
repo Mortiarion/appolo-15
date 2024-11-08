@@ -290,6 +290,7 @@
 					border-radius: 12px;
 					cursor: pointer;
 					height: 100%;
+					aspect-ratio: 1/1;
 
 					&:hover {
 						transform: scale(1.05);
