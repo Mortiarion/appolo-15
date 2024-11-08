@@ -31,7 +31,7 @@
 	});
 </script>
 
-<div id="main-dropdown" class="relative">
+<nav id="main-dropdown" class="relative">
 	<button
 		id="main-dropdown-button"
 		class="flex h-[24px] w-[30px] flex-col justify-around lg:hidden"
@@ -49,25 +49,67 @@
 
 	<ul id="nav" class="hidden lg:static lg:flex lg:gap-8" class:open={isOpenMainDropdown}>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#wellcome">{$t('nav-menu-about-us')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#wellcome">{$t('nav-menu-about-us')}</a
+			>
 		</li>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#hookah">{$t('nav-menu-hookah')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#hookah">{$t('nav-menu-hookah')}</a
+			>
 		</li>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#main-menu">{$t('nav-menu-menu')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#main-menu">{$t('nav-menu-menu')}</a
+			>
 		</li>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#slider-gallery">{$t('nav-menu-gallery')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#slider-gallery">{$t('nav-menu-gallery')}</a
+			>
 		</li>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#faq">{$t('nav-menu-faq')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#faq">{$t('nav-menu-faq')}</a
+			>
 		</li>
 		<li>
-			<a onclick={() => toggleMainDropdown()} href="#contacts">{$t('nav-menu-contacts')}</a>
+			<a
+				onclick={() => {
+					if (window.innerWidth <= 767) {
+						toggleMainDropdown();
+					}
+				}}
+				href="#contacts">{$t('nav-menu-contacts')}</a
+			>
 		</li>
 	</ul>
-</div>
+</nav>
 
 <style lang="postcss">
 	span {
@@ -86,7 +128,6 @@
 		&.open {
 			display: flex;
 			position: absolute;
-			display: flex;
 			flex-direction: column;
 			white-space: nowrap;
 			top: 80px;

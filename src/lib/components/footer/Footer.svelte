@@ -9,7 +9,7 @@
 
 <footer>
 	<div class="container mx-auto px-10 pb-10">
-		<div class=" flex flex-col items-center">
+		<div class=" flex flex-col items-center xl:flex-row xl:justify-between xl:items-end">
 			<LogoIcon />
 
 			<ul class="flex mt-10 mb-5 gap-5">

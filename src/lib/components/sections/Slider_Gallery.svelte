@@ -50,7 +50,8 @@
 
 	onMount(() => {
 		if (sliderTrack) {
-			width = sliderTrack.clientWidth;
+			// width = sliderTrack.clientWidth;
+			width = sliderTrack.getBoundingClientRect().width;
 			slides = sliderTrack.querySelectorAll('.slide');
 			positionSlide();
 		}
@@ -183,7 +184,7 @@
 </script>
 
 <section id="slider-gallery">
-	<div class="container mx-auto mb-24">
+	<div class="container mx-auto mb-14">
 		<div class="slider-container">
 			<button class="prev" type="button" on:click={movePrev}>&#10094</button>
 			<div
@@ -235,6 +236,7 @@
 	.slider-container {
 		position: relative;
 		overflow: hidden;
+		/* max-width: 100%; */
 
 		& .prev,
 		.next {
@@ -246,10 +248,6 @@
 			padding: 0 10px;
 			font-size: 40px;
 			transition: transform 0.3s ease;
-
-			/* &:hover {
-				transform: scale(1.55);
-			} */
 		}
 
 		& .prev {
@@ -261,11 +259,7 @@
 		}
 
 		& .slider-track {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 166px;
-			margin: 40px 0;
+			height: 370px;
 
 			& .slide {
 				display: grid;
@@ -277,7 +271,7 @@
 					transform 1s ease,
 					visibility 1s ease;
 				visibility: hidden;
-
+				height: 100%;
 
 				&.active {
 					visibility: visible;
@@ -288,12 +282,11 @@
 				} */
 
 				& img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
 					transition: transform 0.4s ease;
 					border-radius: 12px;
 					cursor: pointer;
+					height: 100%;
+					aspect-ratio: 1;
 
 					&:hover {
 						transform: scale(1.05);
@@ -327,7 +320,6 @@
 
 		& img {
 			border-radius: 18px;
-			/* padding: 0 50px; */
 		}
 
 		& .modal-prev,
@@ -363,4 +355,28 @@
 			border-radius: 8px;
 		}
 	}
+
+	/* @media (min-width: 375px) {
+		.slider-container {
+			.slider-track {
+				height: 205.2px;
+			}
+		}
+	}
+
+	@media (min-width: 425px) {
+		.slider-container {
+			.slider-track {
+				height: 240.63px;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		.slider-container {
+			.slider-track {
+				height: 483.58px;
+			}
+		}
+	} */
 </style>

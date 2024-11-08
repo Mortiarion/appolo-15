@@ -37,21 +37,21 @@
 </script>
 
 <section id="faq">
-	<div class="container mx-auto mb-24 px-5">
-		<div class="faq-container">
-			<h2 class=" text-center font-audiowide text-2xl font-bold">ЧАСТІ ПИТАННЯ</h2>
+	<div class="container mx-auto mb-24 px-5 lg:px-10">
+		<div class="flex flex-col gap-8 lg:gap-14">
+			<h2 class=" text-center font-audiowide text-2xl font-bold lg:text-5xl">ЧАСТІ ПИТАННЯ</h2>
 
 			<ul class="question-list">
 				{#each questions as { question }, index}
 					<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 					<li class="question-item" on:click={() => toggle(index)}>
 						<div class="question-text text-xl">
-							<button type="button" class="flex justify-between text-left">
+							<button type="button" class="flex justify-between lg:text-2xl">
 								{question}
 								<span class="icon {openIndex === index ? 'rotate' : ''}">&#8250;</span>
 							</button>
 
-							<div class="answer text-base text-faq-unswer {openIndex === index ? 'open' : ''}">
+							<div class="answer text-base text-faq-unswer lg:text-xl {openIndex === index ? 'open' : ''}">
 								<p>{respond[index].text}</p>
 							</div>
 						</div>
@@ -63,12 +63,6 @@
 </section>
 
 <style lang="postcss">
-	.faq-container {
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
-	}
-
 	.question-list {
 		display: flex;
 		flex-direction: column;
@@ -106,17 +100,6 @@
 
 		&.open {
 			max-height: 200px;
-		}
-	}
-
-	@media (hover: hover) {
-		.question-item:hover .icon {
-			transform: rotate(90deg);
-		}
-	}
-	@media (hover: none) {
-		.question-item:active .icon {
-			transform: rotate(90deg);
 		}
 	}
 </style>

@@ -28,25 +28,25 @@
 		class="container mx-auto bg-hookah_mobile bg-[length:290px_810px] bg-[top_100px_center] bg-no-repeat px-10"
 	>
 		<div class="mb-24 flex flex-col items-center">
-			<h2 class="mb-10 font-audiowide text-2xl">КАЛЬЯН</h2>
+			<h2 class="mb-10 font-audiowide text-2xl lg:mb-14 lg:text-5xl">КАЛЬЯН</h2>
 
 			<div class="mb-10 flex flex-col gap-14">
 				{#each block_one as block}
 					<div class="flex flex-col items-center gap-2.5 font-audiowide">
-						<h4 class="text-center text-xl">{block.heading}</h4>
+						<h4 class="text-center text-xl lg:text-4xl">{block.heading}</h4>
 						<div class="separator"></div>
-						<span class="text-center text-sm text-hookah_subtitle">{block.text}</span>
-						<p class="text-xl">{block.paragraph}</p>
+						<span class="text-center text-sm text-hookah_subtitle lg:text-xl">{block.text}</span>
+						<p class="text-xl lg:text-4xl">{block.paragraph}</p>
 					</div>
 				{/each}
 			</div>
 			<div class="flex flex-col items-center gap-2.5 font-audiowide">
-				<h4 class="text-center text-xl">АПОЛЛОН 15</h4>
+				<h4 class="text-center text-xl lg:text-4xl">АПОЛЛОН 15</h4>
 				<div class="separator"></div>
-				<span class="text-center text-sm text-hookah_subtitle"
+				<span class="text-center text-sm text-hookah_subtitle lg:text-xl"
 					>Авторський мікс для справжніх мандривників</span
 				>
-				<p class="text-xl">390₴</p>
+				<p class="text-xl lg:text-4xl">390₴</p>
 			</div>
 		</div>
 	</div>
