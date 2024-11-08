@@ -237,6 +237,7 @@
 		position: relative;
 		overflow: hidden;
 		/* max-width: 100%; */
+		padding: 20px 0;
 
 		& .prev,
 		.next {
@@ -259,8 +260,8 @@
 		}
 
 		& .slider-track {
-			height: 370px;
-			padding: 20px 0;
+			height: 166.25px;
+			/* padding: 20px 0; */
 
 			& .slide {
 				display: grid;
