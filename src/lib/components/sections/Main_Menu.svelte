@@ -266,7 +266,7 @@
 <section id="main-menu">
 	<div class="container mx-auto mb-14 px-10 2xl:px-14">
 		<div class="font-audiowide">
-			<h2 class="mb-10 text-center text-2xl lg:mb-14 lg:text-5xl">МЕНЮ</h2>
+			<h2 class="mb-10 text-center text-3xl font-bold underline lg:mb-14 lg:text-5xl">МЕНЮ</h2>
 
 			<div class="xl:grid xl:grid-cols-2 xl:gap-x-5 2xl:gap-x-20">
 				<div>
@@ -304,15 +304,15 @@
 					<ul class="mb-10 lg:mb-14 lg:text-2xl">
 						{#each list_three as list}
 							<li>
-								<div class="flex justify-between">
-									<p>
+								<div class="flex justify-between border-b bodred-white">
+									<p class="">
 										{list.text_one}
 									</p>
 									<span>
 										{list.text_two}
 									</span>
 								</div>
-								<span class="text-sm text-coctail_subtitle lg:text-base">{list.text_three}</span>
+								<span class="text-sm  lg:text-base">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>

@@ -6,7 +6,7 @@
 
 <section id="wellcome">
 	<div class="container mx-auto mb-24 px-5 lg:px-14">
-		<h1 class="mb-2 text-center text-2xl lg:text-5xl lg:px-10 lg:mb-10">Ласкаво просимо до "Apollo 15"</h1>
+		<h1 class="mb-2 text-center text-2xl flex flex-col lg:text-5xl lg:px-10 lg:mb-10">Ласкаво просимо до <span>"Apollo 15"</span> </h1>
 
 		<p class="text-center text-sm lg:text-xl xl:w-[890px] xl:mx-auto">
 			Наш Lounge Bar це затишний куточок, де час сповільнюється, а фантазія розлітається у світ
