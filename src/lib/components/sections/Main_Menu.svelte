@@ -301,10 +301,10 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з горілкою</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 lg:mb-14 lg:text-2xl">
+					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
 						{#each list_three as list}
 							<li>
-								<div class="flex justify-between border-b bodred-white">
+								<div class="flex justify-between border-b border-white">
 									<p class="">
 										{list.text_one}
 									</p>
