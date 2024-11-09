@@ -1,8 +1,5 @@
-<script lang="ts">
-</script>
-
 <section id="contacts">
-	<div class="container mx-auto px-5 mb-24 xl:px-10">
+	<div class="container mx-auto mb-24 px-5 xl:px-10">
 		<div class="flex flex-col items-center gap-5 lg:gap-9 xl:flex-row xl:justify-between xl:gap-14">
 			<div class="flex flex-col items-center gap-2.5">
 				<p class="font-audiowide text-2xl lg:text-4xl">Графік роботи</p>

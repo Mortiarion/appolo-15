@@ -47,7 +47,7 @@
 		></span>
 	</button>
 
-	<ul id="nav" class="hidden lg:static lg:flex lg:gap-8" class:open={isOpenMainDropdown}>
+	<ul id="nav" class="hidden z-10 lg:static lg:flex lg:gap-8" class:open={isOpenMainDropdown}>
 		<li>
 			<a
 				onclick={() => {
@@ -130,6 +130,7 @@
 			position: absolute;
 			flex-direction: column;
 			white-space: nowrap;
+			gap: 20px;
 			top: 80px;
 		}
 	}

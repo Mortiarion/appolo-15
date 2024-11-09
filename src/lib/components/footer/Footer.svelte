@@ -9,10 +9,12 @@
 
 <footer>
 	<div class="container mx-auto px-10 pb-10">
-		<div class=" flex flex-col items-center xl:flex-row xl:justify-between xl:items-end">
-			<LogoIcon />
+		<div class=" flex flex-col items-center xl:flex-row xl:items-end xl:justify-between">
+			<a href="/">
+				<LogoIcon />
+			</a>
 
-			<ul class="flex mt-10 mb-5 gap-5">
+			<ul class="mb-5 mt-10 flex gap-5">
 				<li>
 					<a href="tel:+380936551515">
 						<Tell_Icon />
@@ -33,14 +35,15 @@
 						<Instagram_Icon />
 					</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="/">
 						<TikTok_Icon />
 					</a>
-				</li>
+				</li> -->
 			</ul>
 
-			<a class="truncate text-pol_conf" href="/privacy_policy">Політика конфіденційності</a>
+			<a class="truncate" href="/privacy_policy">Політика конфіденційності</a>
+			<span>© 2025 UA. Всі права захищені</span>
 		</div>
 	</div>
 </footer>

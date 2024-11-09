@@ -21,7 +21,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/">
+				<a href="viber://chat?number=%2B380936551515">
 					<Viber_Icon />
 				</a>
 			</li>
@@ -30,11 +30,11 @@
 					<Instagram_Icon />
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="/">
 					<TikTok_Icon />
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </section>
