@@ -28,7 +28,8 @@ export default {
 			'faq-unswer': ' #9F9F9F',
 			pol_conf: '#747474',
 			hookah_subtitle: '#9E9E9E',
-			coctail_subtitle: '#6D6D6D'
+			coctail_subtitle: '#6D6D6D',
+			d: '#00FF99'
 		},
 		screens: {
 			bs: '320px',

@@ -298,7 +298,7 @@
 				</div>
 				<div>
 					<div class="mb-5 flex items-center">
-						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з горілкою</p>
+						<p class="whitespace-nowrap text-xl lg:text-4xl text-d font-bold">Коктейлі з горілкою</p>
 						<div class="separator"></div>
 					</div>
 					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
