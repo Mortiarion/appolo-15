@@ -51,7 +51,7 @@
 								<span class="icon {openIndex === index ? 'rotate' : ''}">&#8250;</span>
 							</button>
 
-							<div class="answer text-base text-faq-unswer lg:text-xl {openIndex === index ? 'open' : ''}">
+							<div class="answer text-base text-white lg:text-xl {openIndex === index ? 'open' : ''}">
 								<p>{respond[index].text}</p>
 							</div>
 						</div>

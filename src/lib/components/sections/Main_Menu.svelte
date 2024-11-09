@@ -481,10 +481,25 @@
 					<div class="mb-5 flex items-center">
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Класичні чаї</p>
 						<div class="separator"></div>
-						<span class="lg:text-2xl">600мл</span>
+						<span class="lg:text-2xl">400мл</span>
 					</div>
 					<ul class="mb-10 lg:mb-14 lg:text-2xl">
 						{#each list_twelve as list}
+							<li class="flex justify-between">
+								{list.text_one}<span>{list.text_two}</span>
+							</li>
+						{/each}
+					</ul>
+				</div>
+				
+				<div>
+					<div class="mb-5 flex items-center">
+						<p class="whitespace-nowrap text-xl lg:text-4xl">Органічні чаї</p>
+						<div class="separator"></div>
+						<span class="lg:text-2xl">600мл</span>
+					</div>
+					<ul class="mb-10 lg:mb-14 lg:text-2xl">
+						{#each list_fourteen as list}
 							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
 							</li>
@@ -499,20 +514,6 @@
 					</div>
 					<ul class="mb-10 lg:mb-14 lg:text-2xl">
 						{#each list_thersteen as list}
-							<li class="flex justify-between">
-								{list.text_one}<span>{list.text_two}</span>
-							</li>
-						{/each}
-					</ul>
-				</div>
-				<div>
-					<div class="mb-5 flex items-center">
-						<p class="whitespace-nowrap text-xl lg:text-4xl">Органічні чаї</p>
-						<div class="separator"></div>
-						<span class="lg:text-2xl">800мл</span>
-					</div>
-					<ul class="mb-10 lg:mb-14 lg:text-2xl">
-						{#each list_fourteen as list}
 							<li class="flex justify-between">
 								{list.text_one}<span>{list.text_two}</span>
 							</li>

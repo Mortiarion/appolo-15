@@ -14,22 +14,22 @@
 
 			<ul class="flex mt-10 mb-5 gap-5">
 				<li>
-					<a href="/">
+					<a href="tel:+380936551515">
 						<Tell_Icon />
 					</a>
 				</li>
 				<li>
-					<a href="/">
+					<a href="https://t.me/Apollo15Odessa">
 						<Telegram_Icon />
 					</a>
 				</li>
 				<li>
-					<a href="/">
+					<a href="viber://chat?number=%2B380936551515">
 						<Viber_Icon />
 					</a>
 				</li>
 				<li>
-					<a href="/">
+					<a href="https://www.instagram.com/apollo_15.bar/profilecard/?igsh=MXhuc3U1MnZieWEyeQ==">
 						<Instagram_Icon />
 					</a>
 				</li>

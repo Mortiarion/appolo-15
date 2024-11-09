@@ -7,16 +7,16 @@
 </script>
 
 <!-- min-h-[760px] -->
-<section id="apollo" class="min-h-[400px]">
-	<div class="relative">
+<section id="apollo" class="">
+	<div class="container mx-auto relative min-h-[400px]">
 		<ul class="absolute right-[30px] top-[80px] flex flex-col gap-5">
 			<li>
-				<a href="/">
+				<a href="tel:+380936551515">
 					<Tell_Icon />
 				</a>
 			</li>
 			<li>
-				<a href="/">
+				<a href="https://t.me/Apollo15Odessa">
 					<Telegram_Icon />
 				</a>
 			</li>
@@ -26,7 +26,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/">
+				<a href="https://www.instagram.com/apollo_15.bar/profilecard/?igsh=MXhuc3U1MnZieWEyeQ==">
 					<Instagram_Icon />
 				</a>
 			</li>

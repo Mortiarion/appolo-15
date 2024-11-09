@@ -260,7 +260,7 @@
 		}
 
 		& .slider-track {
-			height: 166.25px;
+			height: 1066.25px;
 			/* padding: 20px 0; */
 
 			& .slide {
