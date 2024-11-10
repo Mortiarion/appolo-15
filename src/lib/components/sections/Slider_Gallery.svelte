@@ -13,6 +13,7 @@
 	let slides: NodeListOf<HTMLDivElement>;
 	let slidesContainer: HTMLDivElement;
 	let width = 0;
+	let lastClickTime = 0;
 
 	const getClassImg = (index: number) => `img-${index}`;
 
@@ -44,6 +45,8 @@
 	});
 
 	function movePrev() {
+		if (!canClick()) return;
+		
 		slides.forEach((slide) => {
 			const x = Number(slide.getAttribute('data-x'));
 
@@ -68,6 +71,8 @@
 	}
 
 	function moveNext() {
+		if (!canClick()) return;
+
 		slides.forEach((slide) => {
 			const x = Number(slide.getAttribute('data-x'));
 			let newX = x + width;
@@ -89,6 +94,15 @@
 			}
 		});
 	}
+
+	function canClick() {
+		const currentTime = Date.now();
+		if (currentTime - lastClickTime < 1000) {
+			return false;
+		}
+		lastClickTime = currentTime;
+		return true;
+	}
 </script>
 
 <section id="slider-gallery">
@@ -109,28 +123,17 @@
 
 <style lang="postcss">
 	.slider-container {
-		/* width: 100%; */
-		/* max-width: 600px; */
-		/* height: 150px; */
 		overflow: hidden;
-		/* margin: 50px auto 0; */
 		position: relative;
 		border-radius: 8px;
 
 		& .slider-wrapper {
 			position: relative;
 			aspect-ratio: 2/1;
-			/* width: 100%; */
 			margin: 0 40px;
 			overflow: hidden;
-				/* display: flex; */
-
-
 
 			& .slide {
-				/* width: 100%; */
-				/* height: 100%; */
-				
 				position: absolute;
 				transition:
 					transform 1s ease-in-out,
@@ -140,18 +143,15 @@
 				opacity: 0;
 				inset: 0;
 
-
 				img {
-					/* position: absolute; */
-					width: 100%;
-					object-fit: contain;
 					height: 100%;
+					margin: 0 auto;
+					border-radius: 28px;
 				}
 
 				&.active {
 					visibility: visible;
 					opacity: 1;
-
 				}
 			}
 		}
@@ -160,7 +160,6 @@
 		#right-btn {
 			font-size: 44px;
 			cursor: pointer;
-			/* background-color: #a7393977; */
 			position: absolute;
 			top: 0;
 			padding: 30px 15px;
