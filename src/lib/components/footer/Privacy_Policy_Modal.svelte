@@ -41,23 +41,24 @@
 
 	function togglePolicy() {
 		isOpenPolicy = !isOpenPolicy;
-        document.body.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
 	}
 
-    function closePolicy() {
-        isOpenPolicy = false;
-        document.body.style.overflow = 'visible'; 
-
-    }
+	function closePolicy() {
+		isOpenPolicy = false;
+		document.body.style.overflow = 'visible';
+	}
 </script>
 
 <section>
 	<button type="button" onclick={togglePolicy}>Політика конфіденційності</button>
 
 	{#if isOpenPolicy}
-		<div class="px-10 fixed min-h-screen overflow-hidden inset-0 bg-modal flex flex-col justify-center items-center">
-            <div class="font-lato overflow-scroll h-[500px] lg:mt-20">
-                <button type="button" class="text-3xl text-right" onclick={closePolicy}>&times</button>
+		<div
+			class="fixed inset-0 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-modal px-10"
+		>
+			<div class="h-[500px] overflow-scroll font-lato lg:mt-20 lg:h-[600px] xl:px-20">
+				<button type="button" class="text-right text-3xl" onclick={closePolicy}>&times</button>
 				<h1 class="mb-5 text-center text-xl lg:mb-10 lg:text-5xl">Політика конфіденційності</h1>
 				<p class="mb-10 text-sm lg:mb-14 lg:text-2xl">
 					Ця політика конфіденційності визначає, як наш сайт – «Apollo 15» обробляє особисту

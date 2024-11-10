@@ -153,7 +153,7 @@
 			<div class="modal">
 				<button type="button" onclick={leftModal} class="modal-prev">&#10094</button>
 				<img
-					class="modal-img"
+					class="modal-img w-[80%] lg:w-[70%] xl:w-[55%]"
 					src={slide[$activeIndex]}
 					alt={`Картинка галереї ${$activeIndex + 1}`}
 				/>
@@ -223,7 +223,6 @@
 
 		& img {
 			border-radius: 18px;
-			width: 80%;
 		}
 
 		& .modal-prev,
