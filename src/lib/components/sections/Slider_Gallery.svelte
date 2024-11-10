@@ -46,7 +46,7 @@
 
 	function movePrev() {
 		if (!canClick()) return;
-		
+
 		slides.forEach((slide) => {
 			const x = Number(slide.getAttribute('data-x'));
 
@@ -109,7 +109,7 @@
 	<div class="container mx-auto mb-24">
 		<div class="slider-container" bind:this={slidesContainer}>
 			<button id="left-btn" onclick={movePrev}>&#10094;</button>
-			<div class="slider-wrapper">
+			<div class="slider-wrapper relative mx-10 aspect-1 overflow-hidden lg:aspect-[2/1]">
 				{#each slide as imgSrc, imgIndex}
 					<div class="slide">
 						<img src={imgSrc} class={getClassImg(imgIndex)} alt={`Зображення ${imgIndex + 1}`} />
@@ -125,14 +125,8 @@
 	.slider-container {
 		overflow: hidden;
 		position: relative;
-		border-radius: 8px;
 
 		& .slider-wrapper {
-			position: relative;
-			aspect-ratio: 2/1;
-			margin: 0 40px;
-			overflow: hidden;
-
 			& .slide {
 				position: absolute;
 				transition:
