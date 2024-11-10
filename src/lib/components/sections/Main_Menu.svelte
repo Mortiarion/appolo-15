@@ -298,10 +298,12 @@
 				</div>
 				<div>
 					<div class="mb-5 flex items-center">
-						<p class="whitespace-nowrap text-xl lg:text-4xl text-d font-bold">Коктейлі з горілкою</p>
+						<p class="gardient whitespace-nowrap text-xl font-bold lg:text-4xl">
+							Коктейлі з горілкою
+						</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_three as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -312,7 +314,7 @@
 										{list.text_two}
 									</span>
 								</div>
-								<span class="text-sm  lg:text-base">{list.text_three}</span>
+								<span class="text-sm lg:text-base">{list.text_three}</span>
 							</li>
 						{/each}
 					</ul>
@@ -322,7 +324,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з ромом</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_four as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -343,7 +345,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з віскі</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_five as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -364,7 +366,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з джином</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 gap-5 flex flex-col lg:mb-14 lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_six as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -385,7 +387,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з текілою</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 lg:mb-14 gap-5 flex flex-col lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_seven as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -406,7 +408,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Коктейлі з просекко</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 lg:mb-14 gap-5 flex flex-col lg:text-2xl">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_eight as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -427,7 +429,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Зіркові коктейлі</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 lg:mb-14 lg:text-2xl gap-5 flex flex-col">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_nine as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -448,7 +450,7 @@
 						<p class="whitespace-nowrap text-xl lg:text-4xl">Шоти</p>
 						<div class="separator"></div>
 					</div>
-					<ul class="mb-10 lg:mb-14 lg:text-2xl gap-5 flex flex-col">
+					<ul class="mb-10 flex flex-col gap-5 lg:mb-14 lg:text-2xl">
 						{#each list_ten as list}
 							<li>
 								<div class="flex justify-between border-b border-white">
@@ -539,6 +541,13 @@
 </section>
 
 <style lang="postcss">
+	.gardient {
+		/* font-size: 25px; */
+		background: linear-gradient(to right, #00ff00, #00ff7f, #1e90ff);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
 	.separator {
 		border: 1px dashed white;
 		width: 100%;
