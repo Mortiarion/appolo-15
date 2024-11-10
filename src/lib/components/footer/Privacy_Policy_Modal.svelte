@@ -54,7 +54,7 @@
 <section>
 	<button type="button" onclick={togglePolicy}>Політика конфіденційності</button>
 
-	<!-- {#if isOpenPolicy} -->
+	{#if isOpenPolicy}
 		<div class="px-10 fixed min-h-screen overflow-hidden inset-0 bg-modal flex flex-col justify-center items-center">
             <div class="font-lato overflow-scroll h-[500px] lg:mt-20">
                 <button type="button" class="text-3xl text-right" onclick={closePolicy}>&times</button>
@@ -74,5 +74,5 @@
 				</div>
 			</div>
 		</div>
-	<!-- {/if} -->
+	{/if}
 </section>
