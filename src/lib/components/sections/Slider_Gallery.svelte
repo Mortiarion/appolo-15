@@ -120,13 +120,17 @@
 		& .slider-wrapper {
 			position: relative;
 			aspect-ratio: 2/1;
-			width: 100%;
+			/* width: 100%; */
 			margin: 0 40px;
 			overflow: hidden;
+				/* display: flex; */
+
+
 
 			& .slide {
-				width: 100%;
-				height: 100%;
+				/* width: 100%; */
+				/* height: 100%; */
+				
 				position: absolute;
 				transition:
 					transform 1s ease-in-out,
@@ -134,6 +138,8 @@
 					visibility 1s ease-in-out;
 				visibility: hidden;
 				opacity: 0;
+				inset: 0;
+
 
 				img {
 					/* position: absolute; */
@@ -145,6 +151,7 @@
 				&.active {
 					visibility: visible;
 					opacity: 1;
+
 				}
 			}
 		}
