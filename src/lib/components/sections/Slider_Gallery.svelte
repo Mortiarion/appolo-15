@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
 
 	let slide = [
 		'/slider_gallery/galery_one.jpg',
@@ -103,6 +104,29 @@
 		lastClickTime = currentTime;
 		return true;
 	}
+
+	const activeIndex = writable<number>(-1);
+	const activeImageIndex = writable<number>(-1);
+	let isOpenModal = $state(false);
+
+	function openModal(index: number) {
+		activeIndex.set(index);
+		isOpenModal = !isOpenModal;
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal() {
+		isOpenModal = false;
+		document.body.style.overflow = 'visible';
+	}
+
+	function leftModal() {
+		activeIndex.update((n) => (n > 0 ? n - 1 : slide.length - 1));
+	}
+
+	function rightModal() {
+		activeIndex.update((n) => (n < slide.length - 1 ? n + 1 : 0));
+	}
 </script>
 
 <section id="slider-gallery">
@@ -112,12 +136,31 @@
 			<div class="slider-wrapper relative mx-10 aspect-1 overflow-hidden lg:aspect-[2/1]">
 				{#each slide as imgSrc, imgIndex}
 					<div class="slide">
-						<img src={imgSrc} class={getClassImg(imgIndex)} alt={`Зображення ${imgIndex + 1}`} />
+						<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
+						<img
+							src={imgSrc}
+							onclick={() => openModal(imgIndex)}
+							class={getClassImg(imgIndex)}
+							alt={`Зображення ${imgIndex + 1}`}
+						/>
 					</div>
 				{/each}
 			</div>
 			<button id="right-btn" onclick={moveNext}>&#10095;</button>
 		</div>
+
+		{#if isOpenModal}
+			<div class="modal">
+				<button type="button" onclick={leftModal} class="modal-prev">&#10094</button>
+				<img
+					class="modal-img"
+					src={slide[$activeIndex]}
+					alt={`Картинка галереї ${$activeIndex + 1}`}
+				/>
+				<button type="button" onclick={rightModal} class="modal-next">&#10095</button>
+				<button type="button" onclick={closeModal} class="close">&times</button>
+			</div>
+		{/if}
 	</div>
 </section>
 
@@ -141,6 +184,7 @@
 					height: 100%;
 					margin: 0 auto;
 					border-radius: 28px;
+					cursor: pointer;
 				}
 
 				&.active {
@@ -165,6 +209,43 @@
 
 		#right-btn {
 			right: 0;
+		}
+	}
+
+	.modal {
+		position: fixed;
+		inset: 0;
+		background-color: #000000cc;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& img {
+			border-radius: 18px;
+		}
+
+		& .modal-prev,
+		.modal-next {
+			font-size: 45px;
+			position: absolute;
+			padding: 20px;
+
+			&.modal-prev {
+				left: 0;
+			}
+
+			&.modal-next {
+				right: 0;
+			}
+		}
+
+		& .close {
+			font-size: 60px;
+			padding: 0 30px;
+			top: 20px;
+			right: 20px;
+			position: absolute;
 		}
 	}
 </style>
