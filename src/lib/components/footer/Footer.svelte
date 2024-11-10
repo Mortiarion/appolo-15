@@ -5,16 +5,35 @@
 	import Tell_Icon from '$lib/icons/Tell_Icon.svelte';
 	import TikTok_Icon from '$lib/icons/TikTok__Icon.svelte';
 	import Viber_Icon from '$lib/icons/Viber_Icon.svelte';
+	import { onMount } from 'svelte';
+
+	let isMobile = $state(window.innerWidth <= 1023);
+	let isDesctop = $state(window.innerWidth >= 1024);
+
+	function handleResize() {
+		isMobile = window.innerWidth <= 1023;
+		isDesctop = window.innerWidth >= 1024;
+	}
+
+	onMount(() => {
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
 </script>
 
 <footer>
 	<div class="container mx-auto px-10 pb-10">
 		<div class=" flex flex-col items-center xl:flex-row xl:items-end xl:justify-between">
-			<a href="/">
-				<LogoIcon />
-			</a>
+			{#if isMobile}
+				<a href="/">
+					<LogoIcon />
+				</a>
+			{/if}
 
-			<ul class="mb-5 mt-10 flex gap-5">
+			<ul class="mb-5 mt-10 flex gap-5 xl:hidden">
 				<li>
 					<a href="tel:+380936551515">
 						<Tell_Icon />
@@ -43,6 +62,12 @@
 			</ul>
 
 			<a class="truncate" href="/privacy_policy">Політика конфіденційності</a>
+
+			{#if isDesctop}
+				<a href="/">
+					<LogoIcon />
+				</a>
+			{/if}
 			<span>© 2025 UA. Всі права захищені</span>
 		</div>
 	</div>

@@ -9,6 +9,8 @@
 	import { onMount } from 'svelte';
 	import { locale, init } from 'svelte-i18n';
 
+	
+
 	let { children } = $props();
 
 	let isInitialized = $state(false);

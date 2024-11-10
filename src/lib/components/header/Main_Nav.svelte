@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { t } from 'svelte-i18n';
+	import { page } from '$app/stores'; 
 
 	let isOpenMainDropdown = $state(false);
 
@@ -31,7 +32,7 @@
 	});
 </script>
 
-<nav id="main-dropdown" class="relative">
+<nav id="main-dropdown" class="relative { $page.url.pathname === '/privacy_policy' ? 'hidden' : '' }">
 	<button
 		id="main-dropdown-button"
 		class="flex h-[24px] w-[30px] flex-col justify-around lg:hidden"

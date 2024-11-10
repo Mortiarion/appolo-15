@@ -45,7 +45,7 @@
 <div class="relative font-audiowide">
 	<button
 		id="lang-button"
-		class=" text-2xl underline"
+		class=" text-xl underline"
 		type="button"
 		aria-label={$locale}
 		onclick={toggleOpetLanguageSwitcher}
@@ -66,7 +66,7 @@
 				<li>
 					<button
 						type="button"
-						class=" text-2xl underline"
+						class=" text-xl underline"
 						aria-label={label}
 						onclick={() => switchLanguage(code)}
 						title={label}
