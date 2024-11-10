@@ -223,7 +223,7 @@
 
 		& img {
 			border-radius: 18px;
-			width: 50%;
+			width: 80%;
 		}
 
 		& .modal-prev,
