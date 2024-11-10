@@ -17,7 +17,7 @@
 <Wellcome />
 <Hookah />
 <Main_Menu />
-<!-- <Slider_Gallery /> -->
+<Slider_Gallery />
 <Faq />
 <Location_Map />
 <Work />
