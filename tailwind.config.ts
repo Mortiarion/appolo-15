@@ -29,7 +29,7 @@ export default {
 			pol_conf: '#747474',
 			hookah_subtitle: '#9E9E9E',
 			coctail_subtitle: '#6D6D6D',
-			d: '#00FF99'
+			modal: '#000000cc'
 		},
 		screens: {
 			bs: '320px',

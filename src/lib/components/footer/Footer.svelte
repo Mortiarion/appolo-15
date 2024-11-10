@@ -6,6 +6,7 @@
 	import TikTok_Icon from '$lib/icons/TikTok__Icon.svelte';
 	import Viber_Icon from '$lib/icons/Viber_Icon.svelte';
 	import { onMount } from 'svelte';
+	import PrivacyPolicyModal from './Privacy_Policy_Modal.svelte';
 
 	let isMobile = $state(window.innerWidth <= 1023);
 	let isDesctop = $state(window.innerWidth >= 1024);
@@ -61,7 +62,8 @@
 				</li> -->
 			</ul>
 
-			<a class="truncate" href="/privacy_policy">Політика конфіденційності</a>
+			<!-- <a class="truncate" href="/privacy_policy">Політика конфіденційності</a> -->
+			<PrivacyPolicyModal />
 
 			{#if isDesctop}
 				<a href="/">

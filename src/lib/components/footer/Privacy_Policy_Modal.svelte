@@ -36,25 +36,43 @@
 				'Якщо у вас виникли питання щодо цієї політики конфіденційності, ви можете зв’язатися з нами через контактну інформацію, розміщену на нашому сайті.'
 		}
 	];
+
+	let isOpenPolicy = $state(false);
+
+	function togglePolicy() {
+		isOpenPolicy = !isOpenPolicy;
+        document.body.style.overflow = 'hidden';
+	}
+
+    function closePolicy() {
+        isOpenPolicy = false;
+        document.body.style.overflow = 'visible'; 
+
+    }
 </script>
 
 <section>
-	<div class="container mx-auto mb-24 px-5 xl:px-14">
-		<div class="font-lato lg:mt-20">
-			<h1 class="mb-5 text-center text-xl lg:mb-10 lg:text-5xl">Політика конфіденційності</h1>
-			<p class="mb-10 text-sm lg:mb-14 lg:text-2xl">
-				Ця політика конфіденційності визначає, як наш сайт – «Apollo 15» обробляє особисту
-				інформацію відвідувачів. Ми поважаємо вашу приватність та зобов'язуємося забезпечувати
-				захист вашої інформації.
-			</p>
-			<div class="flex flex-col gap-5 lg:gap-14">
-				{#each list as l}
-					<div class="flex flex-col gap-2.5 text-sm lg:text-2xl">
-						<p class="font-bold">{l.text_one}</p>
-						<span>{l.text_two}</span>
-					</div>
-				{/each}
+	<button type="button" onclick={togglePolicy}>Політика конфіденційності</button>
+
+	<!-- {#if isOpenPolicy} -->
+		<div class="px-10 fixed min-h-screen overflow-hidden inset-0 bg-modal flex flex-col justify-center items-center">
+            <div class="font-lato overflow-scroll h-[500px] lg:mt-20">
+                <button type="button" class="text-3xl text-right" onclick={closePolicy}>&times</button>
+				<h1 class="mb-5 text-center text-xl lg:mb-10 lg:text-5xl">Політика конфіденційності</h1>
+				<p class="mb-10 text-sm lg:mb-14 lg:text-2xl">
+					Ця політика конфіденційності визначає, як наш сайт – «Apollo 15» обробляє особисту
+					інформацію відвідувачів. Ми поважаємо вашу приватність та зобов'язуємося забезпечувати
+					захист вашої інформації.
+				</p>
+				<div class="flex flex-col gap-5 lg:gap-14">
+					{#each list as l}
+						<div class="flex flex-col gap-2.5 text-sm lg:text-2xl">
+							<p class="font-bold">{l.text_one}</p>
+							<span>{l.text_two}</span>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
-	</div>
+	<!-- {/if} -->
 </section>
