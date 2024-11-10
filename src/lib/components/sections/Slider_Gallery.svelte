@@ -121,6 +121,8 @@
 			position: relative;
 			aspect-ratio: 2/1;
 			width: 100%;
+			margin: 0 40px;
+			overflow: hidden;
 
 			& .slide {
 				width: 100%;
@@ -128,9 +130,10 @@
 				position: absolute;
 				transition:
 					transform 1s ease-in-out,
+					opacity 1s ease-in-out,
 					visibility 1s ease-in-out;
 				visibility: hidden;
-				/* opacity: 0; */
+				opacity: 0;
 
 				img {
 					/* position: absolute; */
@@ -141,7 +144,7 @@
 
 				&.active {
 					visibility: visible;
-					/* opacity: 1; */
+					opacity: 1;
 				}
 			}
 		}
@@ -150,11 +153,11 @@
 		#right-btn {
 			font-size: 44px;
 			cursor: pointer;
-			background-color: #a7393977;
+			/* background-color: #a7393977; */
 			position: absolute;
-			top: 50%;
+			top: 0;
 			padding: 30px 15px;
-			bottom: 50%;
+			bottom: 0;
 			display: flex;
 			align-items: center;
 			z-index: 2;
